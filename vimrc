@@ -1,3 +1,8 @@
+" Author : Hari Yerramsetty
+" github : github.com/ghraka
+
+
+
 " Initial vundle setup
 set nocompatible
 filetype off
