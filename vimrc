@@ -87,5 +87,3 @@ map <space> /
 
 " Map 0 to ^
 map 0 ^
-
-set lbr
