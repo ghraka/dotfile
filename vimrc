@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
+Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
 Plugin 'godlygeek/tabular'
@@ -34,7 +35,8 @@ let mapleader = ","
 let g:mapleader =","
 
 " Fast saving 
-nmap <leader>w :w!<cr>
+nmap <leader>s :w!<cr>
+nmap <leader>a :q<cr>
 
 " Railscats color scheme
 colorscheme railscasts
@@ -87,3 +89,8 @@ map <space> /
 
 " Map 0 to ^
 map 0 ^
+
+" No swapfiles
+set nobackup
+set nowb
+set noswapfile
