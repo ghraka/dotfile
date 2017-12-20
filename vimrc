@@ -19,6 +19,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'elixir-editors/vim-elixir'
 call vundle#end() 
 
 filetype plugin on
