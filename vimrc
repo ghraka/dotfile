@@ -1,8 +1,6 @@
 " Author : Hari Yerramsetty
 " github : github.com/ghraka
 
-
-
 " Initial vundle setup
 set nocompatible
 filetype off
@@ -16,14 +14,18 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'tpope/vim-surround'
-Plugin 'ervandew/supertab'
-Plugin 'itchyny/lightline.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'wikitopian/hardmode'
 call vundle#end() 
 
 filetype plugin on
 filetype indent on
+
+" Enable Hardmode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Auto read when a file is changed from the outside
 set autoread
@@ -40,7 +42,9 @@ nmap <leader>s :w!<cr>
 nmap <leader>a :q<cr>
 
 " Railscats color scheme
-colorscheme railscasts
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
 
 " Ignore case when searching
 set ignorecase
@@ -63,8 +67,6 @@ set expandtab
 " Using smart tabs for align and code indentation
 set smarttab
 
-" To display the status line always
-set laststatus=2
 syntax on
 
 " Settings for ruby file types
@@ -95,3 +97,9 @@ map 0 ^
 set nobackup
 set nowb
 set noswapfile
+
+" Backspace
+set backspace=indent,eol,start
+
+" Disable search highlight
+set nohlsearch
